@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090d18">
+  <title>NEON TETRIS</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <p class="eyebrow">ARCADE CLASSIC</p>
+      <h1>NEON <span>TETRIS</span></h1>
+      <p class="subtitle">Stack the blocks. Beat your best.</p>
+    </header>
+
+    <section class="game-layout">
+      <div class="board-wrap">
+        <canvas id="game-board" width="300" height="600"
+                aria-label="테트리스 게임판"></canvas>
+      </div>
+
+      <aside class="sidebar">
+        <div class="panel">
+          <h2>SCORE</h2>
+          <p id="score">0</p>
+        </div>
+        <div class="panel">
+          <h2>LEVEL</h2>
+          <p id="level">1</p>
+        </div>
+        <div class="panel">
+          <h2>LINES</h2>
+          <p id="lines">0</p>
+        </div>
+        <div class="panel next-panel">
+          <h2>NEXT</h2>
+          <canvas id="next-board" width="120" height="120"></canvas>
+        </div>
+      </aside>
+    </section>
+
+    <section class="controls">
+
+<div class="touch-controls">
+  <button id="touch-left">←</button>
+  <button id="touch-right">→</button>
+  <button id="touch-down">↓</button>
+  <button id="touch-rotate">회전</button>
+  <button id="touch-drop">하드 드롭</button>
+</div>
+
+      <button id="start-button">게임 시작</button>
+      <button id="pause-button">일시정지</button>
+      <p>← → 이동 · ↑ 회전 · ↓ 소프트 드롭</p>
+      <p>SPACE 하드 드롭 · P 일시정지 · ENTER 시작</p>
+    </section>
+
+    <div id="overlay" class="overlay">
+      <div class="overlay-content">
+        <h2 id="overlay-title">NEON TETRIS</h2>
+        <p id="overlay-message">블록을 쌓아 최고 점수에 도전하세요!</p>
+        <button id="overlay-button">게임 시작</button>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>
